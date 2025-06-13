@@ -1,0 +1,77 @@
+.mainDiv {
+    height: 69vh;
+    background-image: url("../../assets/svg/bgEvangadi.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.TextContainer {
+    margin-top: 49px;
+    padding: 0;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TextContainer h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 39px;
+    width: 60%;
+    font-weight: 600;
+    color: #24334b;
+}
+
+.TextContainer div p {
+    font-family: "arial", sans-serif;
+    font-size: 19px;
+    color: #67748E;
+    width: 81%;
+}
+
+.TextContainer div {
+    width: 60%;
+    font-size: 19px;
+}
+
+.TextContainer div p a {
+    color: #da7000;
+    text-decoration: none;
+}
+
+@media (max-width: 789px) {
+    .mainDiv {
+        padding-top: 119px;
+        height: 96vh;
+    }
+
+    .TextContainer {
+        margin-top: 40px;
+    }
+
+    .TextContainer h3 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 28px;
+        width: 90%;
+        font-weight: 600;
+        color: #24334b;
+    }
+
+    .TextContainer div p {
+        font-family: "arial", sans-serif;
+        font-size: 19px;
+        color: #67748E;
+        width: 99%;
+    }
+
+    .TextContainer div {
+        padding-left: 13px;
+        width: 99%;
+    }
+}

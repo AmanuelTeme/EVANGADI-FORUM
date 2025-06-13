@@ -1,0 +1,249 @@
+/* Overall container for the two-column layout */
+.allContainer {
+  width: 100%;
+  max-width: 1200px; /* Adjust max-width for the overall content area */
+  margin: 20px auto; /* Center the entire layout */
+  display: flex; /* Make it a flex container */
+  justify-content: center; /* Center items horizontally if they don't fill max-width */
+  align-items: flex-start; /* Align columns to the top */
+  gap: 30px; /* Space between the two columns */
+  /* background: url("../../../assets/Images/howitworkbg.jpg"); */ /* Keep background if desired */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px; /* Add some padding to the container itself */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+  position: relative; /* Needed if you want to position anything absolutely relative to this container later */
+}
+
+/* Common style for both the "Question" column and the "AI Chat" column */
+.columnSection {
+  flex: 1; /* This makes both columns take equal available space */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between sections within each column */
+  background-color: #f9f9f9; /* Background for the column itself */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Consistent shadow */
+  padding: 25px; /* Padding inside the column */
+}
+
+/* Specific styling for the chatbot column to manage transition */
+.chatbotColumn {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for fade effect */
+}
+
+.chatbotColumn.fadeIn {
+  opacity: 1;
+}
+
+.chatbotColumn.fadeOut {
+  opacity: 0;
+}
+
+/* Adjustments for existing question-related containers to fit inside columnSection */
+.question__container {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.question__wrapper {
+  /* This div already helps group the 'How to Ask' section. */
+}
+
+/* New wrapper for AI chat content to apply padding consistently */
+.aiChatContentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+
+/* Chatbot container adjustments */
+.chatbotContainer {
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  max-width: unset;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+}
+
+/* Existing styles, just ensure they don't interfere with the new layout */
+.question__header__title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.questionListUl {
+  padding: 0 !important;
+}
+
+.questionTitle {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.questionListUl {
+  list-style-type: none;
+  padding: 0;
+  padding-bottom: 0 !important;
+}
+
+.questionItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.questionItem:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  margin-right: 15px;
+  font-size: 1.2rem;
+  color: var(--blue-main);
+}
+
+.highlight {
+  margin-top: 10px;
+  color: var(--blue-main);
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.question__button,
+.question__btn {
+  background-color: var(--blue-shade);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.question__btn {
+  background-color: #6c757d;
+}
+
+.question__button:hover {
+  background-color: var(--blue-main);
+}
+
+.question__btn:hover {
+  background-color: #5a6268;
+}
+
+.question__form input,
+.question__form textarea {
+  width: calc(100% - 30px);
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.question__description:focus {
+  outline: none;
+  border: 1.5px solid var(--primary-color) !important;
+}
+
+.aiChatSection {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.aiChatPrompt {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Chatbot Toggle Area - FLOATING ELEMENT */
+.chatbotToggleArea {
+  position: fixed; /* Makes it float relative to the viewport */
+  bottom: 30px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and icon */
+  cursor: pointer;
+  background-color: var(--blue-main); /* A prominent background */
+  color: white;
+  padding: 10px 15px; /* Padding around text and icon */
+  border-radius: 25px; /* Pill shape */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.chatbotToggleArea:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.askChatbotText {
+  font-size: 1.1rem;
+  font-weight: 500;
+  /* color: white; Already inherited from .chatbotToggleArea */
+}
+
+.chatbotIcon {
+  font-size: 1.8rem; /* Adjust icon size to fit well */
+  line-height: 1; /* Remove extra space above/below icon */
+  /* color: white; Already inherited from .chatbotToggleArea */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .allContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .columnSection {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Adjust floating button position for smaller screens if needed */
+  .chatbotToggleArea {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 12px; /* Slightly less padding */
+    font-size: 1rem;
+  }
+
+  .askChatbotText {
+    font-size: 1rem;
+  }
+
+  .chatbotIcon {
+    font-size: 1.6rem;
+  }
+}

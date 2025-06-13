@@ -1,0 +1,78 @@
+/* authLayout.module.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background:url("../../Assets/Images/blueRedBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.inner_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* max-width: 80% !important; */
+  /* background: #ffffff; */
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* Form container with fade-in and fade-out effects */
+.formContainer {
+  width: 100%;
+  transition: opacity .5s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0.2;
+}
+
+/* About section styling */
+.about {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .inner_container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 80% !important;
+  }
+
+
+}
+@media (max-width: 768px) { 
+  .about{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .inner_container {
+    padding: 20px;
+  }
+
+  .formContainer {
+    margin-bottom: 20px;
+  }
+  .about {
+    display: none;
+  }
+}

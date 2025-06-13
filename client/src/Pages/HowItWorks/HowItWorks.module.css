@@ -1,0 +1,123 @@
+/* HowItWorks.module.css */
+.container{
+    width: 100%;
+    height: auto;
+    background: url('../../Assets/Images/blueRedBG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.inner_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+  /* Step container */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+      border: 2px solid var(--blue-shade);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600 !important;
+    padding: 10px 0;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    line-height: 2;
+  }
+  
+  /* Responsive styling */
+  @media (min-width: 768px) {
+    .steps {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .step {
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .step {
+      flex: 1 1 calc(33.33% - 20px);
+    }
+  }
+  
+  .buttonContainer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .signupButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 15px;
+  }
+  
+  .signupButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .login {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  .login:hover {
+    text-decoration: underline;
+  }
+  
+  /* Additional responsive styles */
+  @media (max-width: 576px) {
+    .title {
+      font-size: 1.75rem;
+    }
+  
+    .description,
+    .step p {
+      font-size: 0.9rem;
+    }
+  
+    .signupButton {
+      width: 100%;
+    }
+  }
+  

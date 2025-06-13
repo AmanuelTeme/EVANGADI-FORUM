@@ -1,0 +1,133 @@
+.formcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 30px;
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  background-color: white;
+  min-height: 500px !important;
+  max-width: 500px !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.heading{
+  padding: 20px 30px;
+}
+.formcontainer h2 {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.formcontainer p {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.logintext {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 100px 15px !important;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 1.5px solid var(--primary-shade) !important;
+}
+
+.passwordinput {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.passwordinput button {
+  position: absolute;
+  top: 43%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.passwordinput input {
+  flex-grow: 1;
+}
+
+.passwordinput button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.submitbtn {
+  padding: 0.75rem;
+  background-color: var(--blue-shade);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitbtn:hover {
+  background-color: var(--blue-main);
+}
+
+.forgotpasswordtext {
+  text-align: end;
+  margin: 5px 0 10px;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-shade);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {  
+  .formcontainer{
+    width: 95% !important;
+    /* height: 100px !important; */
+  }
+  .innerContainer{
+    width: 90%;
+    text-align: center;
+    border: none;
+  }
+
+    .heading h2{
+      margin: 10px;
+      color: black;
+    }
+  }
+  

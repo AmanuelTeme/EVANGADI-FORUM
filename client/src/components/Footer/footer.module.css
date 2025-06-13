@@ -1,0 +1,139 @@
+
+.footer{
+    background-color: #3B455A;
+    color: white;
+    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2.5rem;
+}
+.footer h5{
+    color: #FFFFFF;
+
+}
+.footer_icons{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    color: white;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.footer_icons a:hover{
+    transform: scale(1.09);
+    color: var(--primary-color)
+}
+.footer_icons a{
+    color: #e3e1e1f3;
+    justify-content: space-between;
+    margin: 0 15px;
+    font-size: 50px;
+    max-width: 10rem;
+}
+.footer_contacts li{
+    list-style: none;
+    color: #959CA4;
+    margin: 0.2rem ;
+    padding: 0.2rem;
+    font-size: 1rem;
+}
+.footer_links li{
+    list-style: none;
+    color: #959CA4;
+    margin: 0.2rem ;
+    padding: 0.2rem;
+    font-size: 1rem;
+}
+.footer_ul{
+    padding: 0;
+}
+.footer_ul a{
+    display: flex;
+    flex-direction: column;
+}
+.footer_ul a:hover{
+    color: white !important;
+}
+
+.footer_logo img{
+    padding: 10px;
+    max-width: 50rem;
+}
+.privacy:hover{
+    transform: scale(1.09);
+    color: white !important;
+}
+.linkBar:hover{
+    transform: scale(1.09);
+    color: white !important;
+}
+.footer_contacts ul{
+    padding: 0 !important;
+    margin-left: 0 !important;
+}
+.linkBar{
+    text-Decoration: "none";
+    color: #959CA4 !important    
+}
+
+.footer_ul Link{
+    text-Decoration: "none";
+    color: #959CA4 !important
+}
+.linkBar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* Terms and privacy css */
+
+.termsHeader {
+  background-image: url("../../Assets/Images/bg-transparent6.png"); 
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-position: center; 
+  text-align: center; 
+  padding: 4rem;
+}
+.terms{
+    color: #344767;
+    margin: 6rem;
+    font-size: 1.17rem;
+}
+.termsPara{
+    margin-top: 5rem;
+}
+.terms h5{
+    font-weight: bold;
+}
+.terms h2{
+    font-weight: bold;
+    color: black;
+}
+.terms p{ 
+    padding: 5px;
+}
+.footer_contacts h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items:first baseline;
+      justify-content: center;
+      padding-left: 5rem;
+    }
+    h1,h2,h3,h4,h5,h6{
+      color: #ffffff;
+    }
+    .footer_contacts{
+      margin-left: 2rem !important;
+    }
+    .footer_links h4{
+      align-items:first baseline;
+    }
+  }

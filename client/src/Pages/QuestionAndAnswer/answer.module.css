@@ -1,0 +1,238 @@
+/* Add these to your answer.module.css */
+
+.markSolutionButton {
+  background-color: var(--blue-shade); /* Or any color you prefer */
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #0c4df163;
+  transition: background-color 0.3s ease;
+  margin-left: 15px; /* Add some space from rating buttons */
+}
+
+.markSolutionButton:hover {
+  background-color: var(--blue-main); /* Darker shade on hover */
+}
+
+.solutionIndicator {
+  display: flex;
+  align-items: center;
+  margin-left: 15px; /* Adjust spacing as needed */
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 128, 0, 0.1); /* Light green background */
+}
+
+/* Existing styles... */
+
+/* Container Styles */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 30px 0;
+}
+
+.questionTitle {
+  font-weight: 700;
+  font-size: 30px;
+  color: black !important;
+}
+
+.questionDescription {
+  /* margin-left: 40px; */
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 2px 0;
+  padding-left: 10px; /* Add space between the border and the paragraph */
+  border-left: 2px solid var(--blue-shade);
+  color: black;
+}
+
+.answer_holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 20px;
+  border: 1.5px solid var(--blue-shade);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  gap: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* .answer_holder:hover{
+background-color: var(--blue-shade);
+color: white;
+cursor: pointer;
+transition: all ease-in-out .5s;
+} */
+
+.answerText {
+  flex-grow: 1;
+  font-size: 18px;
+  color: black;
+}
+
+.answer_date {
+  font-size: 14px;
+  text-align: left;
+  color: #555 !important;
+  margin-bottom: 0;
+}
+
+/* .answer_holder:hover {
+  color: white !important;
+  transition: all ease-in-out .5s;
+  transform: scale(1.01);
+  background-color: var(--blue-shade);
+} */
+
+/* Answer Section Styles */
+.answerSection {
+  margin-bottom: 24px;
+}
+
+.answerSectionTitle {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileName {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.account_holder {
+  width: 100px;
+  padding: 10px;
+  display: flex;
+  font-weight: 500;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  /* background-color: black; */
+}
+
+/* Answer Form Styles */
+.answerFormSection {
+  margin-top: 24px;
+}
+
+.answerFormTitle {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.questionPageLink {
+  display: block;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: var(--blue-shade);
+  font-weight: bold;
+  text-align: center;
+}
+
+.answerInput {
+  width: 100%;
+  border-radius: 5px;
+  overflow-x: hidden;
+  padding: 10px 20px;
+  margin-bottom: 7px;
+  height: 120px;
+  outline: none;
+  border: 1.5px solid var(--blue-shade);
+  font-size: 16px;
+  color: #333 !important;
+}
+
+.answerInput:focus {
+  border: 1.5px solid var(--primary-color) !important;
+  outline: none;
+  transition: all ease-in-out 0.3s;
+  color: orange;
+  border: none;
+  border: 1.5px solid orange;
+}
+
+.postAnswerButton {
+  background-color: var(--blue-shade);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.postAnswerButton:hover {
+  background-color: var(--blue-main);
+}
+.answerTextContainer {
+  /* cursor: pointer; */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* .answerTextContainer:hover {
+  background-color: #f7f7f7;
+} */
+
+/* In answer.module.css */
+
+.answerContentArea {
+  flex: 1; /* Allows this area to take up remaining space */
+  padding-left: 15px; /* Adjust as needed for spacing from profile pic */
+}
+
+.ratingSection {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between buttons and count */
+  margin-top: 10px; /* Space from the answer text above */
+  padding-top: 5px;
+  border-top: 1px solid #eee; /* Optional separator */
+}
+
+.ratingButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(
+    --text-color
+  ); /* Use a variable from your global CSS if you have one */
+  transition: color 0.2s ease-in-out;
+}
+
+.ratingButton:hover {
+  color: var(--blue-shade); /* Highlight on hover, use your accent color */
+}
+
+.ratingCount {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--dark-grey); /* Or any color you prefer */
+}

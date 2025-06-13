@@ -1,0 +1,123 @@
+/* Chatbot Toggle Area - FLOATING ELEMENT */
+.chatbotToggleArea {
+  position: fixed; /* Makes it float relative to the viewport */
+  bottom: 30px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and icon */
+  cursor: pointer;
+  background-color: var(--blue-main); /* A prominent background */
+  color: white;
+  padding: 10px 15px; /* Padding around text and icon */
+  border-radius: 25px; /* Pill shape */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.chatbotToggleArea:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.askChatbotText {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.chatbotIcon {
+  font-size: 1.8rem; /* Adjust icon size to fit well */
+  line-height: 1; /* Remove extra space above/below icon */
+}
+
+/* Chatbot Column - for the actual chatbot component */
+.chatbotColumn {
+  position: fixed; /* Position it relative to the viewport as well */
+  bottom: 90px; /* Adjust as needed so it doesn't overlap the toggle button */
+  right: 30px; /* Align with the toggle button */
+  /* Remove fixed width/height here to let Chatbot component define its own size */
+  /* width: 350px; */
+  /* max-height: 500px; */
+  display: flex;
+  flex-direction: column;
+  background-color: transparent; /* Make this transparent, Chatbot.module.css will handle its own background */
+  border-radius: 10px;
+  box-shadow: none; /* Remove outer shadow; Chatbot.module.css handles its own shadow */
+  padding: 0; /* Remove outer padding; Chatbot.jsx content already has padding */
+  box-sizing: border-box;
+  z-index: 999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(20px);
+}
+
+.chatbotColumn.fadeIn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.chatbotColumn.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+/* These styles were interfering with Chatbot.jsx's internal rendering.
+     We will remove them or make them apply only to content *outside* the Chatbot component.
+     For now, remove them from here completely.
+  */
+/*
+  .aiChatContentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .question__header__title {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .aiChatPrompt {
+    color: #555;
+    line-height: 1.4;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  */
+
+/* Media Queries for Responsiveness of the Floating Chatbot */
+@media (max-width: 768px) {
+  .chatbotToggleArea {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+
+  .askChatbotText {
+    font-size: 0.9rem;
+  }
+
+  .chatbotIcon {
+    font-size: 1.5rem;
+  }
+
+  .chatbotColumn {
+    width: 90%; /* Take more width on smaller screens */
+    left: 5%; /* Center it horizontally */
+    right: 5%;
+    bottom: 80px; /* Adjust position */
+    max-height: 70vh; /* Max height relative to viewport */
+    /* Adjust width/height here if necessary for smaller screens, but let Chatbot.module.css handle internal sizing */
+  }
+}
